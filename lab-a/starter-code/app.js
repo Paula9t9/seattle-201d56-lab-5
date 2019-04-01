@@ -63,13 +63,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-  var sum = a+b+c;
-  var product = a*b*c;
+  //Thanks to Anthony for making me realize I wasn't paying attention to the instructions on this problem, haha.
 
-  var sumString = a+ ' and ' +b+ ' and ' +c+ ' sum to ' +sum+ '.';
+  var sumVar = 0;
+  var product = 1;
+
+  sumVar = sum(a, sum(b,c)[0])[0];
+  product = multiply(a, multiply(b,c)[0])[0];
+
+  var sumString = a+ ' and ' +b+ ' and ' +c+ ' sum to ' +sumVar+ '.';
   var productString = 'The product of ' +a+ ' and ' +b+ ' and ' +c+ ' is ' +product+ '.';
 
-  var sumAndMultArray = [sum, product, sumString, productString];
+  var sumAndMultArray = [sumVar, product, sumString, productString];
   return sumAndMultArray;
 }
 
